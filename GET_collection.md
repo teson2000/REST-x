@@ -66,10 +66,38 @@ Pagination may be used by using the API-parameters COUNT and PAGE
 
 ## Return format
 Returning the collection does not have to include all fields of the individual record.
-Links (HATEOAS) should be provided if they are meaningful.
+Links (HATEOAS) should be provided to collection and to collection-items **when requested**
 
-{
-  'links': {}
-  'collection': {}
-}
+The point of HATEOAS is for debate since each endpoint is so flexible it's not realistic to make links for all.
+
+- The return-format are inspired by the JSON:API standard, but simplified.
+- The 'links' are returned by default, with the types of
+  - first, prev, next, last for page-navigation
+  - HINT for new-record entry.
+- The 'LINKS' on item could be requested with LINKS=1
+
+Calculating the appropriate grants is disabled by default since it may require CPU to be trustworthy.
+
+    {
+      'meta':
+        "count": 5325
+      },
+      'links': {
+        "link_type": "URI",
+        "new": "/customers?HINT=1"
+      }
+      'data': [
+        {
+          'id' : 1,
+          'city' : 'Lund',
+          'registration_year': '2015',
+          'LINKS' : {
+            'delete' : "URI",
+            ...
+          },
+        },
+        {},
+        ...
+      ]
+    }
 
