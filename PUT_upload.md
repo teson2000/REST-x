@@ -10,22 +10,22 @@ PUT however, fits perfectly to support uploads of binary content.
 
 The method is applied NOT to the resource, but to the resource-field:
 
-    PUT /customers/53/customer_logo
+    PUT /customers/53/logo_file
     
 The original filename may be supplied
 
-    PUT /customers/53/customer_logo?FILE_NAME=myLogo.png
+    PUT /customers/53/logo_file?FILE_NAME=myLogo.png
     
 The file-name should be url-encoded and in same char-set as API (normally UTF-8)
     
 ## Partial upload
 Upload may be split into sections to allow progress feedback.
 
-    PUT /customers/53/customer_logo?PART=1/10
+    PUT /customers/53/logo_file?PART=1/10
 
 Partial upload may be cancelled (allowing for deletion of incomplete upload at server)
 
-    PUT /customers/53/customer_logo?PART=cancel
+    PUT /customers/53/logo_file?PART=cancel
     
 - The same partial content could be uploaded multiple times
 - Partial content could be uploaded unordered
