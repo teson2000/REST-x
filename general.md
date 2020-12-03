@@ -1,4 +1,7 @@
 # General
+The goal of REST-x is to make REST-API's more fun, easy and stable to work with.
+
+That's it. Here it is:
 
 ## Naming conventions
 
