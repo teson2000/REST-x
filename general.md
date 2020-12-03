@@ -7,7 +7,7 @@ The API should use the __camel_casing__ for resources its attribues.
 
 For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
     
-    /customers?PAGE=4&COUNT=50
+      /customers?PAGE=4&COUNT=50
 
 * API-arguments may be sent in URI or HEADER
 * No risk for collision with standard- or non-standard HTTP-HEADERS.
@@ -19,19 +19,30 @@ For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
   * Provides a difference towards the resources attribues which are in singular
   * Irregular pluralis resources (mouce/mice) are rare
 * Resouces should be limited to a two-level structure
+* Field names are normally singularis
 
-    /customers/53/orders?year=2018&status=shipped
-    
+      /customers/53/orders?year=2018&status=shipped
+
 ### Versioning
 Versioning should be provided in hostname, (hence the project name REST-x)
 * It provides easier mapping (to machines or containers) of different verisons.
 * Current version could be mapped to standard api.example.com
-_Example:_ api-2.example.com/customers?PAGE=5
 
-#### Header-arguments
-REST-x does not use header-arguments.
+      api-2.example.com/customers?PAGE=5
+
+### API-arguments
+REST-x does not use header-arguments. API-arguments are sent in UPPER_CAMEL_CASE in request.
 * Exception: file_name of binary file uploads (PUT).
 * OAUTH/JWT etc are not a part of REST-x guidelines.
+
+Current list of optional API arguments are:
+* COUNT - number of records to be returned in collection
+* PAGE - page of collection
+* LANG - perefered language of error messages and hints.
+* TZ - GMT time-zone
+* DATE_FMT - YYYY-MM-DD
+* TIME_FMT - H:i:s
+* HINT - get data entry guidance for resource.
 
 ### Verbs
 To comply with HTTP-standrds, the REST-verbs should be used as follows:
@@ -56,10 +67,17 @@ Reading data, either:
 * Updating PROVDED FIELDS on resource (/customers/53)
 
 #### DELETE
-* Delete single resources (/customers/53)
+* Delete single resource (/customers/53)
 
 ### Return codes
 Return codes should be limited to the following status codes and may combined with return-messages.
+
+Status codes may be extended with error-response
+
+    {
+      err_code:'BAD_SHIPPING',
+      err_msg:'Error in cleartext that may listen to LANG argument'
+    }
 
 __2xx Succeess__
 * 200 OK (request completed)
