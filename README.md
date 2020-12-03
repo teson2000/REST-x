@@ -5,4 +5,4 @@ Standards for stable REST-API
 - [GET collection](GET_collection.md)
 - [GET resource](GET_resource.md)
 
-Draft 0.0001
+Draft 0.1
