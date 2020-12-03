@@ -12,7 +12,7 @@ For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
     
       /customers?PAGE=4&COUNT=50
 
-* API-arguments may be sent in URI or HEADER
+* API-arguments may be sent in either URI or HEADER (uri is preferred)
 * No risk for collision with standard- or non-standard HTTP-HEADERS.
 * No need to use (or not use) X-prefix in HEADER-arguments.
 
@@ -22,7 +22,6 @@ For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
   * Provides a difference towards the resources attribues which are in singular
   * Irregular pluralis resources (mouce/mice) are rare
 * Resouces should be limited to a two-level structure
-* Field names are normally singularis
 
       /customers/53/orders?year=2018&status=shipped
 
@@ -47,6 +46,9 @@ Current list of optional API arguments are:
 * TIME_FMT - H:i:s
 * HINT - get data entry guidance for resource.
 
+## HATEOAS
+Possible actions and intents on resource should be listed in a links section.
+
 ## Verbs
 To comply with HTTP-standrds, the REST-verbs should be used as follows:
 
@@ -56,16 +58,30 @@ Reading data, either:
 * a collection with filter (/customers?city=Lund)
 * a single resource (/customers/53), 
 * custom view, (/customers/nearby?gps=53.25,25.25)
+* nested collection (/customers/53/orders)
+  * only GET-requests allowed on nested collections
+  
+? should POST / PATCH / DELETE / PUT be allowed on nested collection 
 
 ### POST
 * Creating a record (/customers)
 * Executing a method/intent (/customers/53/doClearBalance)
 * NOT for replacing existing records.
+* For natural keys, key shoud NOT be sent in URI.
+* For surrogate keys, return code should contain created key.
+
+    Status: 201
+    {'customer_id': '123e4567-e89b-12d3-a456-426614174000'}
+
 
 ### PUT
-* Uploading binary content (/customers/53/customer_logo)
+* Uploading binary content (/customers/53_/customer_logo)
 * NOT for replacing existing records.
+* Binary content should be RAW (not FORM-ENCODED)
+* Binary content in body, other information in HEADER
 
+      HEADER: FILE_NAME: 'apples.png', MIME_TYPE: 'image/png'
+     
 ### PATCH
 * Updating PROVDED FIELDS on resource (/customers/53)
 
