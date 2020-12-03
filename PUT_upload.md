@@ -28,5 +28,6 @@ Partial upload may be cancelled (allowing for deletion of incomplete upload at s
     PUT /customers/53/logo_file?PART=cancel
     
 - The same partial content could be uploaded multiple times
+- File-name is only valid for the first part (and then ignored).
 - Partial content could be uploaded unordered
 - Until completion (PART=X/X), content response code is 202. On complete, 201
