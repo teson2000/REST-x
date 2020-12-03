@@ -6,8 +6,8 @@
 The API should use the __camel_casing__ for resources its attribues.
 
 For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
-
-_Example:_ /customers?PAGE=4&COUNT=50
+    
+    /customers?PAGE=4&COUNT=50
 
 * API-arguments may be sent in URI or HEADER
 * No risk for collision with standard- or non-standard HTTP-HEADERS.
