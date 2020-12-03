@@ -6,7 +6,10 @@ That's it. Here it is:
 ## Naming conventions
 
 ### Casing
-The API should use the **camel_casing** for resources its attribues.
+The API should use the **camel_casing** for resources its attribues. Period.
+* More universal than PascalCasing
+* Allows for API-arguments using UPPERCASE-arguments
+* Improved readability (i_max vs IMax)
 
 For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
     
@@ -26,9 +29,10 @@ For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
       /customers/53/orders?year=2018&status=shipped
 
 ### Versioning
-Versioning should be provided in hostname, (hence the project name REST-x)
-- It provides easier mapping (to machines or containers) of different verisons.
+Versioning should be provided in **hostname**, (hence the project name REST-x)
+- It provides easier machine/container-mapping of different verisons.
 - Current version could be mapped to standard api.example.com
+- **Both versioning in URI or HEADER are discouraged**
 
       api-2.example.com/customers?PAGE=5
 
@@ -46,8 +50,12 @@ Current list of optional API arguments are:
 - TIME_FMT - H:i:s
 - HINT - get data entry guidance for resource.
 
+..this list is incomplete
+
 ## HATEOAS
-Possible actions and intents on resource should be listed in a links section.
+- On single resource, allowed actions should be listed in a links section.
+- On collection, allowed action on collection (next/prev) should be listed.
+- On collection, allowed actions on collection-item **could** be listed.
 
 ## Verbs
 To comply with HTTP-standrds, the REST-verbs should be used as follows:
