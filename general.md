@@ -14,11 +14,14 @@ For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
 * No need to use (or not use) X-prefix in HEADER-arguments.
 
 ### Resources- and field names
-Resources should be named in pluralis
-* Resources are collections
-* Provides a difference towards the resources attribues which are in singular
-* Irregular pluralis resources (mouce/mice) are rare
+* Resources should be named in pluralis, since:
+  * Resources are collections
+  * Provides a difference towards the resources attribues which are in singular
+  * Irregular pluralis resources (mouce/mice) are rare
+* Resouces should be limited to a two-level structure
 
+    /customers/53/orders?year=2018&status=shipped
+    
 ### Versioning
 Versioning should be provided in hostname, (hence the project name REST-x)
 * It provides easier mapping (to machines or containers) of different verisons.
