@@ -9,6 +9,6 @@ Only provided values are updated.
 
 ## DELETE
 
-   DELETE /customers/53
+    DELETE /customers/53
    
 Good-bye resource, it's been nice.
