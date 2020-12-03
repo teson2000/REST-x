@@ -15,8 +15,9 @@ For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
     
       /customers?PAGE=4&COUNT=50
 
-- API-arguments may be sent in either URI or HEADER (uri is preferred)
-- No risk for collision with standard- or non-standard HTTP-HEADERS.
+- API-arguments should be sent in URI
+- No risk for field-name collision since UPPER_CASE
+- No risk for collision with standard- or non-standard upper-kebab-case HTTP-HEADERS.
 - No need to use (or not use) X-prefix in HEADER-arguments.
 
 ### Resources- and field names
