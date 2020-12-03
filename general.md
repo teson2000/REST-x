@@ -70,10 +70,6 @@ Reading data, either:
 * For natural keys, key shoud NOT be sent in URI.
 * For surrogate keys, return code should contain created key.
 
-    Status: 201
-    {'customer_id': '123e4567-e89b-12d3-a456-426614174000'}
-
-
 ### PUT
 * Uploading binary content (/customers/53_/customer_logo)
 * NOT for replacing existing records.
