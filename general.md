@@ -30,7 +30,7 @@ Versioning should be provided in hostname, (hence the project name REST-x)
 
       api-2.example.com/customers?PAGE=5
 
-### API-arguments
+## API-arguments
 REST-x does not use header-arguments. API-arguments are sent in UPPER_CAMEL_CASE in request.
 * Exception: file_name of binary file uploads (PUT).
 * OAUTH/JWT etc are not a part of REST-x guidelines.
@@ -44,32 +44,32 @@ Current list of optional API arguments are:
 * TIME_FMT - H:i:s
 * HINT - get data entry guidance for resource.
 
-### Verbs
+## Verbs
 To comply with HTTP-standrds, the REST-verbs should be used as follows:
 
-#### GET
+### GET
 Reading data, either:
 * collections (/customers),
 * a collection with filter (/customers?city=Lund)
 * a single resource (/customers/53), 
 * custom view, (/customers/nearby?gps=53.25,25.25)
 
-#### POST
+### POST
 * Creating a record (/customers)
 * Executing a method/intent (/customers/53/doClearBalance)
 * NOT for replacing existing records.
 
-#### PUT
+### PUT
 * Uploading binary content (/customers/53/customer_logo)
 * NOT for replacing existing records.
 
-#### PATCH
+### PATCH
 * Updating PROVDED FIELDS on resource (/customers/53)
 
-#### DELETE
+### DELETE
 * Delete single resource (/customers/53)
 
-### Return codes
+## Return codes
 Return codes should be limited to the following status codes and may combined with return-messages.
 
 Status codes may be extended with error-response
