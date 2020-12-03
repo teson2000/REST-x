@@ -2,6 +2,7 @@
 Standards for stable REST-API
 
 - [General specifications](general.md)
-- [GET collections](GET_collections.md)
+- [GET collection](GET_collection.md)
+- [GET resource](GET_resource.md)
 
 Draft 0.0001
