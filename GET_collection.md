@@ -107,7 +107,7 @@ Custom views allow arguments not present as fields.
 Return format of custom views may be different from the standard resource-collection format.
 The HATEOAS-link "self" should point to the standard resource URI.
 
-     /customers/nearby?gps=53.25,25.25
+     /customers/nearby?my_gps=53.25,25.25
 
 May return:
 
