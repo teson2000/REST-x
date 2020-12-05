@@ -12,10 +12,10 @@ Each API-endpoint should be of one of the types below, with standard endpoint-lo
 | Collection  | List with filter- and sort-options. With support of POST to create record<br>/customers and /customers/{id}/orders          | GET, POST           |
 | View        | Alternate view of collection with calulated result<br> /customers/nearby and /customers/{id}/orders/may_be_delayed          | GET, POST \*        |
 | Resource    | View, update & delete record<br>customers/{id} and /customers/{id}/orders/{id}                                              | GET, PATCH, DELETE  |
-| Intent      | Request action on resource, syncronous or asyncronous<br>/customers/{id}/doResetPassword /customers/{id}/order/doRelease    | POST                |
+| Intent      | Request action on resource, syncronous or async<br>/customers/{id}/doResetPassword, /customers/{id}/order/{id}/doRelease    | POST                |
 | Upload      | Binary upload to resource field<br>/customers/{id}/field or /customers/{id}/orders/{id}/field                               | PUT                 |
 
-\* If resource uses natural key, method of view needs to be POST to avoid collision (on natural key "nearby")
+\* If resource uses natural key, method of view needs to be POST to avoid endpoint collision (on natural key "nearby")
 
 ## Naming conventions
 
