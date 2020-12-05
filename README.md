@@ -1,5 +1,7 @@
 # REST-x
-Standards for stable REST-API. Look no further. This is it.
+Standards for stable REST-API.
+
+T
 
 - [General specifications](general.md)
 - [GET collection](GET_collection.md)
