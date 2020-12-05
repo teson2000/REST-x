@@ -1,5 +1,30 @@
 # General
-The goal of REST-x is to make REST-API's more fun, easy and stable to work with.
+
+## GOAL
+- Define best praxises for REST
+- For the better, bend some rules.
+
+## End-point types
+Each API-endpoint should be of one of the types below, with standard endpoint-location.
+
+| Type        | Description                                                                | Methods allowed     |
+| ----------- | -------------------------------------------------------------------------- | ------------------- |
+| Collection  | List with filter- and sort-options. With support of POST to create record  | GET, POST           |
+| View        | Alternate view of collection with calulated result                         | GET                 |
+| Resource    | View, update & delete record                                               | GET, PATCH, DELETE  |
+| Intent      | Request action on resource, syncronous or asyncronous                      | POST                |
+| Upload      | Binary upload to resource field                                            | PUT                 |
+
+**Endpoint paths**
+
+| Type            | Endpoint examples
+| --------------- | -------------------------------------------------------------------------- |
+| Collection      | /customers and /customers/{id}/orders                                      |
+| View            | /customers/nearby and /customers/{id}/orders/may_be_delayed                |
+| Resource        | /customers/{id} and /customers/{id}/orders/{id}                            |
+| Intent          | /customers/{id}/doResetPassword /customers/{id}/order/doRelease            |
+| Upload          | /customers/{id}/field or /customers/{id}/orders/{id}/field                 |
+
 
 ## Naming conventions
 
