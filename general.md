@@ -10,12 +10,42 @@ Each API-endpoint should be of one of the types below, with standard endpoint-lo
 | Type        | Description                                                                                                                 | Methods allowed     |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | Collection  | List with filter- and sort-options. With support of POST to create record<br>/customers and /customers/{id}/orders          | GET, POST           |
-| View        | Alternate view of collection with calulated result<br> /customers/nearby and /customers/{id}/orders/may_be_delayed          | GET, POST \*        |
+| View        | Alternate view of collection with calulated result<br> /customers/nearby and /customers/{id}/orders/may_be_delayed          | GET, POST           |
 | Resource    | View, update & delete record<br>customers/{id} and /customers/{id}/orders/{id}                                              | GET, PATCH, DELETE  |
 | Intent      | Request action on resource, syncronous or async<br>/customers/{id}/doResetPassword, /customers/{id}/order/{id}/doRelease    | POST                |
 | Upload      | Binary upload to resource field<br>/customers/{id}/field or /customers/{id}/orders/{id}/field                               | PUT                 |
 
-\* If resource uses natural key, method of view needs to be POST to avoid endpoint collision (on natural key "nearby")
+## End-point parsing
+Resource ID is identified as integer or string in parentheses.
+
+    /groups/(72e8b54c-37ce-11eb-adc1-0242ac120002)/posts/634
+
+**Parsing overview**
+
+| Method | Path        | Description                                  |
+| ------ | ----------- | -------------------------------------------- |
+| GET    | /S          | List collection of resources                 |
+| POST   | /S          | Create new resource                          |
+| GET    | /S/S        | List view                                    |
+| POST   | /S/S        | Send intent on collection                    |
+| GET    | /S/R        | View resource                                |
+| PATCH  | /S/R        | Update resource                              |
+| DELETE | /S/R        | Delete resource                              |
+| POST	 | /S/R/S	   | Sent intent on resource +                    |
+| PUT    | /S/R/S      | Binary upload                                |
+
+| Method | Path        | Description                                  |
+| ------ | ----------- | -------------------------------------------- |
+| GET    | /S/R/S      | List collection of resources                 |
+| POST   | /S/R/S      | Create new resource +                        |
+| GET    | /S/R/S/S    | List view                                    |
+| POST   | /S/R/S/S    | Send intent on collection                    |
+| GET    | /S/R/S/R    | View resource                                |
+| PATCH  | /S/R/S/R    | Update resource                              |
+| DELETE | /S/R/S/R    | Delete resource                              |
+| POST	 | /S/R/S/R/S  | Sent intent on resource +                    |
+| PUT    | /S/R/S/R/S  | Binary upload                                |
+
 
 ## Naming conventions
 
