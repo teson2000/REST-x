@@ -1,4 +1,4 @@
-# GET resource
+# Resource (GET/PATCH/DELETE/POST)
 - Data and HATEOAS-links are provided.
 - Enums are provided for option-boxes.
 - Enums should adhere LANG in header
