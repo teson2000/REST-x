@@ -12,18 +12,18 @@ The method is applied NOT to the resource, but to the resource-field:
 
     PUT /customers/53/logo_file
     
-The original filename may be supplied
+The original filename may be supplied.
 
     PUT /customers/53/logo_file?FILE_NAME=myLogo.png
     
 The file-name should be url-encoded and in same char-set as API (normally UTF-8)
     
 ## Partial upload
-Upload may be split into sections to allow progress feedback.
+Upload may be split into sections to allow progress feedback. Chunks may be 10 or 100.
 
     PUT /customers/53/logo_file?PART=1/10
     
-On final part, md5-checksum may be provided to validate upload
+On final part, file-name and md5-checksum may be provided to validate upload
 
     PUT /customers/53/logo_file?PART=10/10&MD5=d41d8cd98f00b204e9800998ecf8427e
 
@@ -33,8 +33,7 @@ Partial upload may be cancelled (allowing for deletion of incomplete upload at s
     
 In order to support stateless and indempotency, the following applies:
 - The same partial content could be uploaded multiple times
-- File-name is only valid for the first part (and then ignored).
 - Partial content could be uploaded unordered
 - Until completion (PART=X/X), content response code is 202. On complete, 201
-- At final part, we may send md5 for integrity check
+- At final part, we may send original file-name and md5 for integrity check
 - Server cannot append each chunk but must separate chunks until final part completed.
