@@ -22,9 +22,9 @@ Self hosted collaboration management.
     /session/users
     
     /admin/settings
-    /admin/register
-    /admin/reboot
+    /admin/reg_svr
     
     /api/ping
     /api/status
+    /api/restart
     
