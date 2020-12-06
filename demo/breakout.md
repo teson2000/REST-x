@@ -1,30 +1,34 @@
 # Breakout
+Evaluation of design.
 
 ## Goal
 Self hosted collaboration management.
 
 ## Endpoints
 
-    /groups
-    /groups/{group-id}
-    /groups/{group-id}/doSendInvite
-    /groups/{group-id}/members
-    /groups/{group-id}/members/{member-id}
-    /groups/{group-id}/photos
-    /groups/{group-id}/photos/{photo-id}    
-    /groups/{group-id}/posts
+    GET /groups
+    POST /groups
+    GET /groups/{group-id}
+    PUT /groups/{group-id}/cover_image
+    POST /groups/{group-id}/doSendInvite
+    GET /groups/{group-id}/members
+    GET /groups/{group-id}/members/{member-id}
+    GET /groups/{group-id}/photos
+    GET /groups/{group-id}/photos/{photo-id}    
+    GET /groups/{group-id}/posts
     
-    /member/{member-id}/photos
+    GET /member/{member-id}/photos
     
-    /session/doLogin
-    /session/doLogout
-    /session/who_am_i
-    /session/users
+    POST /session/doLogin
+    POST /session/doLogout
+    GET /session/who_am_i
+    GET /session/users
     
-    /admin/settings
-    /admin/reg_svr
+    GET /admin/settings
+    POST /admin/reg_svr
     
-    /api/ping
-    /api/status
-    /api/restart
+    GET /api/ping
+    POST /api/doPing
+    GET /api/status
+    POST /api/doRestart
     
