@@ -5,6 +5,26 @@ Self hosted collaboration management.
 
 ## Endpoints
 
-    /group/{group-id}/members
+    /groups
+    /groups/{group-id}
+    /groups/{group-id}/doSendInvite
+    /groups/{group-id}/members
+    /groups/{group-id}/members/{member-id}
+    /groups/{group-id}/photos
+    /groups/{group-id}/photos/{photo-id}    
+    /groups/{group-id}/posts
     
+    /member/{member-id}/photos
+    
+    /session/login
+    /session/logout
+    /session/who_am_i
+    /session/users
+    
+    /admin/settings
+    /admin/register
+    /admin/reboot
+    
+    /api/ping
+    /api/status
     
