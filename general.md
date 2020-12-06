@@ -96,41 +96,6 @@ Current list of optional API arguments are:
 - On collection, allowed action on collection (next/prev) should be listed.
 - On collection, allowed actions on collection-item **could** be listed.
 
-## Verbs
-To comply with HTTP-standrds, the REST-verbs should be used as follows:
-
-### GET
-Reading data, either:
-- collections (/customers),
-- a collection with filter (/customers?city=Lund)
-- a single resource (/customers/53), 
-- custom view, (/customers/nearby?gps=53.25,25.25)
-- nested collection (/customers/53/orders)
-  - only GET-requests allowed on nested collections
-  
-? should POST / PATCH / DELETE / PUT be allowed on nested collection 
-
-### POST
-- Creating a record (/customers)
-- Executing a method/intent (/customers/53/doClearBalance)
-- NOT for replacing existing records.
-- For natural keys, key shoud NOT be sent in URI.
-- For surrogate keys, return code should contain created key.
-
-### PUT
-- Uploading binary content (/customers/53_/customer_logo)
-- NOT for replacing existing records.
-- Binary content should be RAW (not FORM-ENCODED)
-- Binary content in body, other information in HEADER
-
-      HEADER: FILE_NAME: 'apples.png', MIME_TYPE: 'image/png'
-     
-### PATCH
-- Updating PROVDED FIELDS on resource (/customers/53)
-
-### DELETE
-- Delete single resource (/customers/53)
-
 ## Return codes
 Return codes should be limited to the following status codes and may combined with return-messages.
 
