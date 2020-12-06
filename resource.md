@@ -40,3 +40,10 @@ Hinting of editing existing record
         'size': 30,
         'required':no,
         ...
+
+
+## PATCH and binary data
+- PATCH may remove binary data by setting field_name to null.
+
+## POST and binary data
+- POST (form-data) may update binary data and also delete binary field using field_name_DELETE = 1
