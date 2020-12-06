@@ -16,8 +16,8 @@ Self hosted collaboration management.
     
     /member/{member-id}/photos
     
-    /session/login
-    /session/logout
+    /session/doLogin
+    /session/doLogout
     /session/who_am_i
     /session/users
     
