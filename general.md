@@ -31,6 +31,7 @@ Resource ID is identified as integer or string in parentheses.
 | GET    | /S/R+       | View resource                                | /S/R/S/R               |
 | PATCH  | /S/R        | Update resource                              | /S/R/S/R               |
 | DELETE | /S/R        | Delete resource                              | /S/R/S/R               |
+| POST   | /S/R        | Update resource with html-form-data          | /S/R/S/R               |
 | POST	 | /S/R/S	   | Sent intent on resource +                    | /S/R/S/R/S             |
 | PUT    | /S/R/S      | Binary upload                                | /S/R/S/R/S             |
 
