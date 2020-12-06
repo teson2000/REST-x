@@ -1,4 +1,5 @@
-# GET-collection
+# Collection (GET)
+For POST-action, see resource.
 
      /customers
      /customers/limited_view
@@ -100,31 +101,3 @@ Calculating the appropriate grants is disabled by default since it may require C
         ...
       ]
     }
-
-## Custom views
-Custom views allow arguments not present as fields.
-
-Return format of custom views may be different from the standard resource-collection format.
-The HATEOAS-link "self" should point to the standard resource URI.
-
-     /customers/nearby?my_gps=53.25,25.25
-
-May return:
-
-    {
-      'data': [
-        {
-          'id' : 3030,
-           'name': 'bob',
-           'distance_km': 40,
-           'LINKS': {
-             'self' : '/customers/3030'
-           }
-         },
-         {
-           'id : 5050,
-           ..
-         }
-       }
-     }
-     
