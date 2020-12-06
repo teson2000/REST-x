@@ -10,7 +10,7 @@ Each API-endpoint should be of one of the types below, with standard endpoint-lo
 | Type        | Description                                                                                                                 | Methods allowed     |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | Collection  | List with filter- and sort-options. With support of POST to create record<br>/customers and /customers/{id}/orders          | GET, POST           |
-| View        | Alternate view of collection with calulated result<br> /customers/nearby and /customers/{id}/orders/may_be_delayed          | GET, POST           |
+| View        | Alternate view of collection with calulated result<br> /customers/nearby and /customers/{id}/orders/may_be_delayed          | GET                 |
 | Resource    | View, update & delete record<br>customers/{id} and /customers/{id}/orders/{id}                                              | GET, PATCH, DELETE  |
 | Intent      | Request action on resource, syncronous or async<br>/customers/{id}/doResetPassword, /customers/{id}/order/{id}/doRelease    | POST                |
 | Upload      | Binary upload to resource field<br>/customers/{id}/field or /customers/{id}/orders/{id}/field                               | PUT                 |
