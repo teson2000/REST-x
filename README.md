@@ -87,8 +87,8 @@ Current list of optional API arguments are:
 - PAGE - page of collection
 - LANG - perefered language of error messages and hints.
 - TZ - GMT time-zone
-- DATE_FMT - YYYY-MM-DD
-- TIME_FMT - H:i:s
+- FMT_DATE - YYYY-MM-DD
+- FMT_TIME - H:i:s
 - HINT - get data entry guidance for resource.
 
 ..this list is incomplete
