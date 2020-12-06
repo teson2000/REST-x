@@ -22,6 +22,10 @@ The file-name should be url-encoded and in same char-set as API (normally UTF-8)
 Upload may be split into sections to allow progress feedback.
 
     PUT /customers/53/logo_file?PART=1/10
+    
+On final part, md5-checksum may be provided to validate upload
+
+    PUT /customers/53/logo_file?PART=10/10&MD5=d41d8cd98f00b204e9800998ecf8427e
 
 Partial upload may be cancelled (allowing for deletion of incomplete upload at server)
 
@@ -32,4 +36,5 @@ In order to support stateless and indempotency, the following applies:
 - File-name is only valid for the first part (and then ignored).
 - Partial content could be uploaded unordered
 - Until completion (PART=X/X), content response code is 202. On complete, 201
-- We may send file-size and md5 for integrity check?
+- At final part, we may send md5 for integrity check
+- Server cannot append each chunk but must separate chunks until final part completed.
