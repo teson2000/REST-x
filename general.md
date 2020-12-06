@@ -22,30 +22,19 @@ Resource ID is identified as integer or string in parentheses.
 
 **Parsing overview**
 
-| Method | Path        | Description                                  |
-| ------ | ----------- | -------------------------------------------- |
-| GET    | /S          | List collection of resources                 |
-| POST   | /S          | Create new resource                          |
-| GET    | /S/S        | List view                                    |
-| POST   | /S/S        | Send intent on collection                    |
-| GET    | /S/R        | View resource                                |
-| PATCH  | /S/R        | Update resource                              |
-| DELETE | /S/R        | Delete resource                              |
-| POST	 | /S/R/S	   | Sent intent on resource +                    |
-| PUT    | /S/R/S      | Binary upload                                |
+| Method | Path        | Description                                  | Sub-resource           |
+| ------ | ----------- | -------------------------------------------- | ---------------------- |
+| GET    | /S          | List collection of resources                 | /S/R/S                 |
+| POST   | /S          | Create new resource                          | /S/R/S +               |
+| GET    | /S/S        | List view                                    | /S/R/S/S               |
+| POST   | /S/S        | Send intent on collection                    | /S/R/S/S               |
+| GET    | /S/R        | View resource                                | /S/R/S/R               |
+| PATCH  | /S/R        | Update resource                              | /S/R/S/R               |
+| DELETE | /S/R        | Delete resource                              | /S/R/S/R               |
+| POST	 | /S/R/S	   | Sent intent on resource +                    | /S/R/S/R/S             |
+| PUT    | /S/R/S      | Binary upload                                | /S/R/S/R/S             |
 
-| Method | Path        | Description                                  |
-| ------ | ----------- | -------------------------------------------- |
-| GET    | /S/R/S      | List collection of resources                 |
-| POST   | /S/R/S      | Create new resource +                        |
-| GET    | /S/R/S/S    | List view                                    |
-| POST   | /S/R/S/S    | Send intent on collection                    |
-| GET    | /S/R/S/R    | View resource                                |
-| PATCH  | /S/R/S/R    | Update resource                              |
-| DELETE | /S/R/S/R    | Delete resource                              |
-| POST	 | /S/R/S/R/S  | Sent intent on resource +                    |
-| PUT    | /S/R/S/R/S  | Binary upload                                |
-
++ Note risk for collision between for POST /S/R/S. Intent /S/R/S has precedence over New sub-resource /S/R/S
 
 ## Naming conventions
 
