@@ -28,13 +28,14 @@ Resource ID is identified as integer or string in parentheses.
 | POST   | /S          | Create new resource                          | /S/R/S +               |
 | GET    | /S/S        | List view                                    | /S/R/S/S               |
 | POST   | /S/S        | Send intent on collection                    | /S/R/S/S               |
-| GET    | /S/R        | View resource                                | /S/R/S/R               |
+| GET    | /S/R+       | View resource                                | /S/R/S/R               |
 | PATCH  | /S/R        | Update resource                              | /S/R/S/R               |
 | DELETE | /S/R        | Delete resource                              | /S/R/S/R               |
 | POST	 | /S/R/S	   | Sent intent on resource +                    | /S/R/S/R/S             |
 | PUT    | /S/R/S      | Binary upload                                | /S/R/S/R/S             |
 
 + Note risk for collision between for POST /S/R/S. Intent /S/R/S has precedence over New sub-resource /S/R/S
++ If R=HINT on /S/R, resource-field sizes may be retured. (?)
 
 ## Naming conventions
 
