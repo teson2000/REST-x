@@ -45,9 +45,13 @@ The API should use the **camel_casing** for resources its attribues. Period.
 * Allows for API-arguments using UPPERCASE-arguments
 * Improved readability (i_max vs IMax)
 
+For intents (verbs) on resources or collections, camelCasing shoud be used to accentuate the action.
+
+     /customers/346/doConvertToPartner
+
 For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
     
-      /customers?PAGE=4&COUNT=50
+     /customers?PAGE=4&COUNT=50
 
 - API-arguments should be sent in URI
 - No risk for field-name collision since UPPER_CASE
