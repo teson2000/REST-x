@@ -8,8 +8,8 @@
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
 
 | Type        | Description                                                                                | Methods allowed     |
-| ----------- | --------------------------------------------------------------------------------- -------- | ------------------- |
-| Collection  | GET: List with filter- and sort-options.<br>POST: With support of POST to create resouce   | GET, POST           |
+| ----------- | ------------------------------------------------------------------------------------------ | ------------------- |
+| Collection  | GET List with filter- and sort-options.<br>POST With support of POST to create resouce     | GET, POST           |
 | View        | Alternate view of collection with calulated result                                         | GET                 |
 | Resource    | View, update & delete record                                                               | GET, PATCH, DELETE  |
 | Intent      | Request action on resource, syncronous or asyncronous                                      | POST                |
