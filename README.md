@@ -1,8 +1,5 @@
 # REST-x
-
-## GOAL
-- Define best praxises for REST
-- For the better, bend some rules.
+Protocol for REST-API services.
 
 ## End-point types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
