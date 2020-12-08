@@ -46,24 +46,26 @@ The API should use the **camel_casing** for resources its attribues. Period.
 * Allows for API-arguments using UPPERCASE-arguments
 * Improved readability (i_max vs IMax)
 
-For intents (verbs) on resources or collections, camelCasing shoud be used to accentuate the action.
+For intents (verbs) on resources or collections, camelCasing shoud be used to accentuate the method/intent.
 
      /customers/346/doConvertToPartner
 
-For API arguments, such as COUNT or PAGE, UPPER_CAMEL_CASE should be used.
+For API arguments, such as COUNT or PAGE, UPPER_KEBAB_CASE should be used.
     
      /customers?PAGE=4&COUNT=50
 
-- API-arguments should be sent in URI
+- API-arguments may be sent in URI or HEADER
 - No risk for field-name collision since UPPER_CASE
 - No risk for collision with standard- or non-standard upper-kebab-case HTTP-HEADERS.
 - No need to use (or not use) X-prefix in HEADER-arguments.
+- Arguments in HEADER *may* be prefixed with API_
 
 ### Resources- and field names
-- Resources should be named in pluralis, since:
+- Resources should normally be named in pluralis, since:
   - Resources are collections
   - Provides a difference towards the resources attribues which are in singular
   - Irregular pluralis resources (mouce/mice) are rare
+  - Exception when surronding systems use singular standards
 - Resouces should be limited to a two-level structure
 
       /customers/53/orders?year=2018&status=shipped
