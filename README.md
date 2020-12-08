@@ -1,5 +1,9 @@
 # REST-x
-Protocol for REST-API services.
+Extended protocol for REST-API services.
+
+## WHY
+- Avoid hitting the wall as API gets bigger
+- It's about time
 
 ## End-point types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
