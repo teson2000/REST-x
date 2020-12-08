@@ -10,8 +10,8 @@ Each API-endpoint should be of one of the types below, with standard endpoint-lo
 
 | Type        | Description                                                                                | Methods allowed     |
 | ----------- | ------------------------------------------------------------------------------------------ | ------------------- |
-| Collection  | GET List with filter- and sort-options.<br>POST With support of POST to create resouce     | GET, POST           |
-| View        | Alternate view of collection with calulated result                                         | GET                 |
+| Collection  | List with filter-, sorting- and field arguments on resource fields.<br>POST create resouce | GET, POST           |
+| View        | Alternate view of collection with non-resource arguments                                   | GET                 |
 | Resource    | View, update & delete record                                                               | GET, PATCH, DELETE  |
 | Intent      | Request action on resource, syncronous or asyncronous                                      | POST                |
 | Upload      | Binary upload to resource field with support for chuncks                                   | PUT                 |
@@ -20,6 +20,10 @@ Each API-endpoint should be of one of the types below, with standard endpoint-lo
 Resource ID is identified as integer or string in parentheses.
 
     /groups/(72e8b54c-37ce-11eb-adc1-0242ac120002)/posts/634
+    
+Composite keys should be avoided but may be used if JSON- and uri-encoded, inside parentheses. (Below not url-encoded for visibility)
+
+    /order/({order_no:"522-532",order_part="4"})/items
 
 **Parsing overview**
 
@@ -42,15 +46,15 @@ Resource ID is identified as integer or string in parentheses.
 
 ### Casing
 The API should use the **camel_casing** for resources its attribues. Period.
-* More universal than PascalCasing
-* Allows for API-arguments using UPPERCASE-arguments
+* More universal (java, python etc) than camelCasing or PascalCasing
+* Allows for safe API-arguments using UPPERCASE-arguments
 * Improved readability (i_max vs IMax)
 
-For intents (verbs) on resources or collections, camelCasing shoud be used to accentuate the method/intent.
+For intents (verbs) on resources or collections, camelCasing *shoud* be used to accentuate the method/intent.
 
-     /customers/346/doConvertToPartner
+     POST /customers/346/convertToPartner
 
-For API arguments, such as COUNT or PAGE, UPPER_KEBAB_CASE should be used.
+For API arguments, such as COUNT or PAGE, UPPER_SNAKE_CASE should be used.
     
      /customers?PAGE=4&COUNT=50
 
