@@ -1,7 +1,7 @@
 # REST-x
 Extended application-protocol for REST-API services.
 
-**Version: 0.4**
+[Version: 0.4](changelog.md)
 
 ## WHY
 - Avoid hitting the wall as API gets bigger
