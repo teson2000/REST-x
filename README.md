@@ -1,6 +1,8 @@
 # REST-x
 Extended application-protocol for REST-API services.
 
+**Version: 0.4**
+
 ## WHY
 - Avoid hitting the wall as API gets bigger
 - Guide myself and possibly others.
