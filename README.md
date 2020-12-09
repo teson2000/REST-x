@@ -1,20 +1,20 @@
 # REST-x
-Extended protocol for REST-API services.
+Extended application-protocol for REST-API services.
 
 ## WHY
 - Avoid hitting the wall as API gets bigger
-- It's about time
+- Guide myself and possibly others.
 
 ## End-point types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
 
-| Type        | Description                                                                                | Methods allowed     |
-| ----------- | ------------------------------------------------------------------------------------------ | ------------------- |
-| Collection  | List with filter-, sorting- and field arguments on resource fields.<br>POST create resouce | GET, POST           |
-| View        | Alternate view of collection with non-resource arguments                                   | GET                 |
-| Resource    | View, update & delete record                                                               | GET, PATCH, DELETE  |
-| Intent      | Request action on resource, syncronous or asyncronous                                      | POST                |
-| Upload      | Binary upload to resource field with support for chuncks                                   | PUT                 |
+| Type          | Description                                                                                | Methods allowed     |
+| ------------- | ------------------------------------------------------------------------------------------ | ------------------- |
+| [Collection]  | List with filter-, sorting- and field arguments on resource fields.<br>POST create resouce | GET, POST           |
+| [View]        | Alternate view of collection with non-resource arguments                                   | GET                 |
+| [Resource]    | View, update & delete record                                                               | GET, PATCH, DELETE  |
+| [Intent]      | Request action on resource, syncronous or asyncronous                                      | POST                |
+| [Upload]      | Binary upload to resource field with support for chuncks                                   | PUT                 |
 
 ## End-point parsing
 Resource ID is identified as integer or string in parentheses.
