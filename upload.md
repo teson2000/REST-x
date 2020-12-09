@@ -37,3 +37,5 @@ In order to support stateless and indempotency, the following applies:
 - Until completion (PART=X/X), content response code is 202. On complete, 201
 - At final part, we may send original file-name and md5 for integrity check
 - Server cannot append each chunk but must separate chunks until final part completed.
+
+[Back](README.md)
