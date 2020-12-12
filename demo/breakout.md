@@ -9,13 +9,15 @@ Self hosted collaboration management.
     GET /groups
     POST /groups
     GET /groups/{group-id}
+    GET /groups/{group-id}/overview
     PUT /groups/{group-id}/cover_image
     POST /groups/{group-id}/doSendInvite
     GET /groups/{group-id}/members
-    GET /groups/{group-id}/members/{member-id}
     GET /groups/{group-id}/photos
-    GET /groups/{group-id}/photos/{photo-id}    
     GET /groups/{group-id}/posts
+    GET /groups/{group-id}/events
+    GET /groups/{group-id}/photos/{photo-id}    
+    GET /groups/{group-id}/members/{member-id}
     
     GET /member/{member-id}/photos
     
@@ -31,4 +33,5 @@ Self hosted collaboration management.
     POST /api/doPing
     GET /api/status
     POST /api/doRestart
+    
     
