@@ -14,6 +14,7 @@ Self hosted collaboration management.
     POST /groups/{group-id}/doSendInvite
     GET /groups/{group-id}/members
     GET /groups/{group-id}/photos
+    GET /groups/{group-id}/files
     GET /groups/{group-id}/posts
     GET /groups/{group-id}/events
     GET /groups/{group-id}/photos/{photo-id}    
