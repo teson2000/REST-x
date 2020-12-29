@@ -8,13 +8,13 @@
       {
         'links': {
           'self': 'https://api2v4.example.com/orders/(535-535)'
-          'release': './doRelease'
+          'ship': './doShip'
           'delete': '.'
         },
         'data': {
           'order_id': '535-535',
           'adress': '221B Baker Street',
-          'status': 'open'
+          'status_code': 'open'
         },
         'enums': {
           'status_code': {
