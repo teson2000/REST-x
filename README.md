@@ -34,6 +34,8 @@ Composite keys should be avoided but may be used if JSON- and uri-encoded, insid
     /order/({order_no:"522-532",order_part="4"})/items
 
 **Parsing overview**
+__S__ String value
+__R__ Resource ID
 
 | Method | Path        | Description                                  | Sub-resource           |
 | ------ | ----------- | -------------------------------------------- | ---------------------- |
@@ -136,5 +138,5 @@ Status codes may be extended with error-response
 - 404 Not found (You requested a resource, id or PAGE that does not exist)
 
 **5xx Server error**
-- 500 Internal Server Error (The API is to be blamed)
-- 503 Service Unavailable (3rd part API to be blamed)
+- 500 Internal Server Error (The backend hit an unexpected error)
+- 503 Service Unavailable (A 3rd part service could not be reached)
