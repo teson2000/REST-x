@@ -41,14 +41,14 @@ Hinting of editing existing record
       'name': {
         'type': varchar,
         'size': 50,
-        'required':true,
+        'required': true,
         'label': 'Company name',
         'placeholder':'Enter company name'
       },
       'city': {
         'type': varchar,
         'size': 30,
-        'required':no,
+        'required': false,
         ...
 
 
