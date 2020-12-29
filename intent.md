@@ -5,7 +5,7 @@
 
     /customer/53/doBlockForSales
     
-    /rockets/apollo11/doLaunch
+    /rockets/(Apollo 11)/doLaunch
     
     /imports/53/doCommit
     
