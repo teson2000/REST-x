@@ -3,6 +3,7 @@
 - Enums are provided for option-boxes.
 - Enums should adhere LANG in header
 - Intents could be added as HATEOAS-links
+- Only authorized HATEOAS/intents should be provided.
     
       {
         'links': {
