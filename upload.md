@@ -38,5 +38,6 @@ Partial upload does __not__ have to support idempotency.
 - Until completion (PART=X/X), content response code is 202. On complete, 201
 - At final part, we may send original file-name and md5 for integrity check
 - Previous version of file should be replaced upon successfull final chunk.
+- Upon cancel, response code is 200, even if temporary file was never created. 
 
 [Back](README.md)
