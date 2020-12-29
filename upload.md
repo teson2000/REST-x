@@ -31,11 +31,12 @@ Partial upload may be cancelled (allowing for deletion of incomplete upload at s
 
     PUT /customers/53/logo_file?PART=cancel
     
-In order to support stateless and indempotency, the following applies:
-- The same partial content could be uploaded multiple times
-- Partial content could be uploaded unordered
+Partial upload does __not__ have to support idempotency.
+- The same partial content should __not__ be uploaded multiple times
+- Partial content shoul be uploaded in order.
+- Server may sequentially append each chunk to tempororary file.
 - Until completion (PART=X/X), content response code is 202. On complete, 201
 - At final part, we may send original file-name and md5 for integrity check
-- Server cannot append each chunk but must separate chunks until final part completed.
+- Previous version of file should be replaced upon successfull final chunk.
 
 [Back](README.md)
