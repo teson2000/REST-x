@@ -3,17 +3,18 @@
 - Enums are provided for option-boxes.
 - Enums should adhere LANG in header
 - Intents could be added as HATEOAS-links
+    
+      {
+        'links': {},
+        'data': {},
+        'enums': {
+          'status_code': {
+            'shipped': 'Is shipped',
+            'open': 'Open for modification'
+          }
+        }
+      }
 
-     {
-       'links': {},
-       'data': {},
-       'enums': {
-         'status_code': {
-           'shipped': 'Is shipped',
-           'open': 'Open for modification'
-         }
-       }
-     }
 
 ## Hinting
 Hinting provides information to the client about field-type, field-size and recommended labels and placehoders.
