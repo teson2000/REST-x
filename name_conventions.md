@@ -12,7 +12,7 @@ For intents (verbs) on resources or collections, camelCasing *should* be used to
 
 For API arguments, such as COUNT or PAGE, UPPER_SNAKE_CASE should be used.
     
-     /customers?PAGE=4&COUNT=50
+     GET /customers?PAGE=4&COUNT=50
 
 - API-arguments may be sent in URI or HEADER
 - No risk for field-name collision since UPPER_CASE
