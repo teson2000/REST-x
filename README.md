@@ -17,6 +17,12 @@ Extended application-protocol for REST-API services.
 | [hateoas]          | Embedded in (\_links) and with label declaration                                       |
 | [return_codes]     | Code and msg.                                                                          |
 
+[versioning]: versioning.md
+[name_conventions]: name_conventions.md
+[api_arguments]: api_arguments.md
+[parsing]: parsing.md
+[hateoas]: hateoas.md
+[return_codes]: return_codes.md
 
 ## End-point types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
