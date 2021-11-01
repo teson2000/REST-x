@@ -16,9 +16,9 @@ Filtering may be applied to to fields in collection
 
      /customers?city=Lund
 
-Filter-operators may be provided by adding the API-parameter \_OP (operator).
+Filter-operators may be provided by adding the API-parameter OPER_(field_name) (operator).
 
-    /customers?city=Lund&registration_year=2010&registration_year_OP=GTE
+    /customers?city=Lund&registration_year=2010&OPER_registration_year=GTE
     
 Valid operators are:
 
@@ -40,20 +40,20 @@ Sorting may be applied to collection in two ways, either on field by using api-s
 **Option 1, individual sort-arguments**
 This option is designed to directly interact with web forms:
 
-     /customers?city_SORT=asc
+     /customers?SORT_city=asc
 
 May be combined with additional sort-fields
 
-    /customers?city_SORT=asc&registration_year_SORT=desc
+    /customers?SORT_city=asc&SORT_registration_year=desc
     
 Sorting priority is by default in argument-order but may be overridden with
 
-    /customers?city=SORT_asc&registration_year_SORT=desc&SORT_ORDER=registration_year,city
+    /customers?SORT_city=asc&SORT_registration_year=desc&SORT_BY=registration_year,city
     
 **Option 2, combined sort-arguments**
 Designed to interact with designed API-request
 
-    /customers?SORTING=+city,-registration_year
+    /customers?SORT_BY=+city,-registration_year
     
 ### Field-filtering (X-axis)
 To minimize used bandwidth, fields may be limited
