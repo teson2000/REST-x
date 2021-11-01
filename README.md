@@ -8,14 +8,14 @@ Extended application-protocol for REST-API services.
 - Guide myself and possibly others.
 
 ## Summary
-| Topic              | Summary                                                                                |
-| ------------------ | -------------------------------------------------------------------------------------- |
-| [versioning]       | Versioning should be defined in host name, not in header or url.                       |
-| [name_conventions] | Resources in snake_case, intents in pascalCase, api-arguments in UPPER_SNAKE_CASE      |
-| [api_arguments]    | In url (not header) PAGE, COUNT, OP_(field)), LANG, etc..                              |
-| [parsing]          | Routing of request to resource / collection / intent                                   |
-| [hateoas]          | Embedded in (\_links) and with label declaration                                       |
-| [return_codes]     | Code and msg.                                                                          |
+| Topic              | Summary                                                                                | Status |
+| ------------------ | -------------------------------------------------------------------------------------- | ------ |
+| [versioning]       | Versioning should be defined in host name, not in header or url.                       | final  |
+| [name_conventions] | Resources in snake_case, intents in pascalCase, api-arguments in UPPER_SNAKE_CASE      | final  |
+| [api_arguments]    | In url (not header) PAGE, COUNT, OP_(field)), LANG, etc..                              | draft  |
+| [parsing]          | Routing of request to resource / collection / intent                                   | draft  |
+| [hateoas]          | Embedded in (\_links) and with label declaration                                       | draft  |
+| [return_codes]     | Code and msg.                                                                          | draft  |
 
 [versioning]: versioning.md
 [name_conventions]: name_conventions.md
