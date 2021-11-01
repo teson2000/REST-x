@@ -28,4 +28,4 @@ For API arguments, such as COUNT or PAGE, UPPER_SNAKE_CASE should be used.
   - Exception when surronding systems use singular standards
 - Resouces should be limited to a two-level structure
 
-      /customers/53/orders?year=2018&status=shipped
+      GET /customers/53/orders?year=2018&status=shipped
