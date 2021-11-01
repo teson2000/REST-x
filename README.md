@@ -11,7 +11,7 @@ Extended application-protocol for REST-API services.
 | Topic              | Summary                                                                                |
 | ------------------ | -------------------------------------------------------------------------------------- |
 | [versioning]       | Versioning should be defined in host name, not in header or url.                       |
-| [mame_conventions] | Resources in snake_case, intents in pascalCase, api-arguments in UPPER_SNAKE_CASE      |
+| [name_conventions] | Resources in snake_case, intents in pascalCase, api-arguments in UPPER_SNAKE_CASE      |
 | [api_arguments]    | In url (not header) PAGE, COUNT, OP_(field)), LANG, etc..                              |
 | [parsing]          | Routing of request to resource / collection / intent                                   |
 | [hateoas]          | Embedded in (\_links) and with label declaration                                       |
