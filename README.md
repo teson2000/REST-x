@@ -15,6 +15,13 @@ Extended application-protocol for REST-API services.
  - [api_arguments]
  - [return_codes]
 
+[parsing]: parsing.md
+[name_conventions]: name_conventions.md
+[versioning]: versioning.md
+[hateoas]: hateoas.md
+[api_arguments]: api_arguments.md
+[return_codes]: return_codes.md
+
 ## End-point types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
 
