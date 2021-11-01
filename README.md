@@ -8,19 +8,15 @@ Extended application-protocol for REST-API services.
 - Guide myself and possibly others.
 
 ## Summary
- - [parsing]
- - [name_conventions]
- - [versioning]
- - [hateoas]
- - [api_arguments]
- - [return_codes]
+| Topic              | Summary                                                                                |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| [versioning]       | Versioning should be defined in host name, not in header or url.                       |
+| [mame_conventions] | Resources in snake_case, intents in pascalCase, api-arguments in UPPER_SNAKE_CASE      |
+| [api_arguments]    | In url (not header) PAGE, COUNT, OP_(field)), LANG, etc..                              |
+| [parsing]          | Routing of request to resource / collection / intent                                   |
+| [hateoas]          | Embedded in (\_links) and with label declaration                                       |
+| [return_codes]     | Code and msg.                                                                          |
 
-[parsing]: parsing.md
-[name_conventions]: name_conventions.md
-[versioning]: versioning.md
-[hateoas]: hateoas.md
-[api_arguments]: api_arguments.md
-[return_codes]: return_codes.md
 
 ## End-point types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
