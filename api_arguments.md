@@ -5,7 +5,8 @@ REST-x does not endorse header-arguments. API-arguments are preferably sent as U
 - OAUTH/JWT etc are not a part of REST-x guidelines.
 
 Current list of optional API arguments are:
-**Collection arguments**
+
+**Collection arguments (final)**
 - COUNT - number of records to be returned in collection
 - FIELDS - limits collection fields (FIELDS=first_name,last_name)
 - PAGE - page of collection
@@ -14,7 +15,7 @@ Current list of optional API arguments are:
 - SORT_BY - collection of fields for nested sort order (=last_name,first_name) or (=+lastname,-first_name)
 
 
-**Drafts**
+**General arguments (draft)**
 - LANG - perefered language of error messages, HATEOAS-labels and field-labels / placeholder / hints.
 - TZ - GMT time-zone
 - FMT_DATE - YYYY-MM-DD
