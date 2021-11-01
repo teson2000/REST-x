@@ -7,6 +7,14 @@ Extended application-protocol for REST-API services.
 - Avoid hitting the wall as API gets bigger
 - Guide myself and possibly others.
 
+## Summary
+ - [parsing]
+ - [name_conventions]
+ - [versioning]
+ - [hateoas]
+ - [api_arguments]
+ - [return_codes]
+
 ## End-point types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
 
