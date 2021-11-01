@@ -11,6 +11,8 @@ Current list of optional API arguments are:
 - OPER_(field_name) - GT/LT/NEQU etc on filter collection
 - ORDER_(field_name) - = ASC or DESC
 - ORDERBY - collection of fields for nested sort order (=last_name,first_name) or (=+lastname,-first_name)
+
+
 **Drafts**
 - LANG - perefered language of error messages, HATEOAS-labels and field-labels / placeholder / hints.
 - TZ - GMT time-zone
