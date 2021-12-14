@@ -28,5 +28,5 @@ Composite keys should be avoided but may be used if JSON- and uri-encoded, insid
 Sub-resources has the following paths.
 **TO BE WRITTEN*
 
-(1) Note risk for collision between for POST /S/R/S. Intent /S/R/S has precedence over New sub-resource /S/R/S
-(2) Html-form data may be accepted for create/update record. Create record by providing null as key.
+1) Note risk for collision between for POST /S/R/S. Intent /S/R/S has precedence over New sub-resource /S/R/S
+2) Html-form data may be accepted for create/update record. Create record by providing null as key.
