@@ -1,7 +1,7 @@
 # Naming conventions / casing
 
 ## Resources
-Resources and their fields should use **camel_casing**. Period.
+Resources and their fields should use **snake_casing**. Period.
 
 - More universal (java, python etc) than camelCasing or PascalCasing
 - Allows for safe API-arguments using UPPERCASE-arguments
