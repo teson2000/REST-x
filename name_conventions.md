@@ -15,7 +15,7 @@ Resources and their fields should use **snake_casing**. Period.
       GET /customers/53/orders?year=2018&status=shipped
 
 ## Intents
-For intents (verbs) on resources or collections, camelCasing *should* be used to accentuate the method/intent.
+For intents (RPC like actions) on resources or collections, camelCasing *should* be used to accentuate the method/intent.
 
      POST /customers/346/convertToPartner
      
