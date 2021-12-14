@@ -56,6 +56,6 @@ Hinting of editing existing record
 - PATCH may remove binary data by setting field_name to null.
 
 ## POST and binary data
-- POST (form-data) may update binary data and also delete binary field using field_name_DELETE = 1
+- POST (form-data) may update binary data and also delete binary field using DELETE_field_name = 1
 
 [Back](README.md)
