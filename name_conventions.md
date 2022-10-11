@@ -1,5 +1,8 @@
 # Naming conventions / casing
 
+## Update
+No casing requirements. If len =>3 chars, must NOT be UPPER_CASE - reserved for API-arguments.
+
 ## Resources
 Resources and their fields should use **snake_casing**. Period.
 
