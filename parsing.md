@@ -1,15 +1,26 @@
 ## End-point parsing
-Resource ID is identified as integer or string in parentheses.
+Resource ID is identified as integer or UUID.
 
-    /groups/(72e8b54c-37ce-11eb-adc1-0242ac120002)/posts/634
-    
+    /groups/5325/posts/634
+    /groups/72e8b54c-37ce-11eb-adc1-0242ac120002/posts/634
+
+Single natural should be provided in parentheses.
+
+    /groups/(rest-freaks/enthuiasts)/posts/634
+
 Composite keys should be avoided but may be used if JSON- and uri-encoded, inside parentheses. (Below not url-encoded for visibility)
 
     /order/({order_no:"522-532",order_part="4"})/items
 
 **Parsing overview**
 - __S__ String value. Resource or intent based on context.
-- __R__ Resource ID. Integer, GUID or composit according to above.
+- __I__ Resource ID. Integer, GUID or composit according to above.
+
+| Path       | GET                       | POST                       | PATCH                       | PUT                       |
+| /S         | Collection of resources   | Create new resource        | Update resource             | Write blob on resource    |
+| /S/I       | Get resource              | Web update                 | N/A                         | N/A                       |
+| /S/S       | Custom view on collection | N/A                        |                             |                           |
+
 
 | Path       | Method | Description                                  | Sub-resource           |
 | ---------- | ------ | -------------------------------------------- | ---------------------- |
