@@ -17,6 +17,7 @@ Composite keys should be avoided but may be used if JSON- and uri-encoded, insid
 - __I__ Resource ID. Integer, GUID or composit according to above.
 
 | Path       | GET                       | POST                       | PATCH                       | PUT                       |
+| ---------- | ------------------------- | -------------------------- | --------------------------- | ------------------------- |
 | /S         | Collection of resources   | Create new resource        | Update resource             | Write blob on resource    |
 | /S/I       | Get resource              | Web update                 | N/A                         | N/A                       |
 | /S/S       | Custom view on collection | N/A                        |                             |                           |
