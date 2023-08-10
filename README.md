@@ -24,7 +24,7 @@ Extended application-protocol for REST-API services.
 [hateoas]: hateoas.md
 [return_codes]: return_codes.md
 
-## End-point types
+## Endpoint types
 Each API-endpoint should be of one of the types below, with standard endpoint-location.
 
 | Type          | Description                                                                                | Methods allowed          |
