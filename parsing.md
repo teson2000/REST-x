@@ -36,6 +36,11 @@ Composite keys should be avoided but may be used if JSON- and uri-encoded, insid
 | /S/R/S (1) | POST	  | Request intent on resource                   | /S/R/S /R/S            |
 | /S/R/S     | PUT    | Binary upload of field S on resource R       | /S/R/S /R/S            |
 
+**No put for data-records**
+The API may not be aware of the complete structure of the resource/record, and full replacement risks unintentional data loss.
+PATCH is used for partial or full updates of data records, and POST for form-style create/update with semantic logic.
+PUT is reserved for binary uploads or document fields.
+
 **Sub resources**
 Sub-resources has the following paths.
 **TO BE WRITTEN*
