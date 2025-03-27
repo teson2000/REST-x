@@ -19,20 +19,24 @@ Filtering may be applied to to fields in collection
 Filter-operators may be provided by adding the API-parameter OPER_(field_name) (operator).
 
     /customers?city=Lund&registration_year=2010&OPER_registration_year=GTE
+
+The filter type BETWEEN uses the additional OPERTO_(field_name) to pass max-value
+
+    /customers?city=Lund&registration_date=2001-01-01&OPER_registration_date=BETWEEN&OPERTO_registration_date=2014-12-12
     
 Valid operators are:
 
-| \_OP      | Meaning | Comment                           |
-| --------- | ------- | --------------------------------- |
-| EQU       | =       | default                           |
-| NOT       | <>      | Not equal to                      |
-| GT        | >       | Greater than                      |
-| GTE       | >=      | Greater or equal                  |
-| LT        | <       | Less than                         |
-| LTE       | <=      | Less or equal than                |
-| LIKE      | *       | Limits set by API                 |
-| IN        | a,b,c   | Comma-separated list of values    |
-| BETWEEN   | 10-20   | Dash-spearated values             |
+| \_OP       | Meaning | Comment                            |
+| ---------- | ------- | ---------------------------------- |
+| EQU        | =       | default                            |
+| NOT        | <>      | Not equal to                       |
+| GT         | >       | Greater than                       |
+| GTE        | >=      | Greater or equal                   |
+| LT         | <       | Less than                          |
+| LTE        | <=      | Less or equal than                 |
+| LIKE       | *       | Limits set by API                  |
+| IN         | a,b,c   | Comma-separated list of values     |
+| BETWEEN    | range   | Use `OPER_` + `OPERTO_` for bounds |
 
 ### Sorting
 Sorting may be applied to collection in two ways, either on field by using api-suffix \_SORT
