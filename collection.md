@@ -22,7 +22,7 @@ Filter-operators may be provided by adding the API-parameter OPER_(field_name) (
 
 The filter type BETWEEN uses the additional OPERTO_(field_name) to pass max-value
 
-    /customers?city=Lund&registration_date=2001-01-01&OPER_registration_date=BETWEEN&OPERTO_registration_date=2014-12-12
+    /customers?city=Lund&registration_date=2001-01-01&OPER_registration_date=BETWEEN&TO_registration_date=2014-12-12
     
 Valid operators are:
 
@@ -36,7 +36,8 @@ Valid operators are:
 | LTE        | <=      | Less or equal than                 |
 | LIKE       | *       | Limits set by API                  |
 | IN         | a,b,c   | Comma-separated list of values     |
-| BETWEEN    | range   | Use `OPER_` + `OPERTO_` for bounds |
+| BETWEEN    | range   | (field) sets from value            |
+| (BETWEEN)  | range   | TO_(field) sets to value           |
 
 ### Sorting
 Sorting may be applied to collection in two ways, either on field by using api-suffix \_SORT
