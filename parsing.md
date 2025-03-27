@@ -6,7 +6,7 @@ Resource ID is identified as integer or UUID.
 
 Single natural should be provided in parentheses.
 
-    /groups/(rest-freaks/enthuiasts)/posts/634
+    /groups/(rest-freaks/enthusiasts)/posts/634
 
 Composite keys should be avoided but may be used if JSON- and uri-encoded, inside parentheses. (Below not url-encoded for visibility)
 
